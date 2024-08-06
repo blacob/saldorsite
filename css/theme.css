@@ -80,6 +80,34 @@
   :root {
     scroll-behavior: smooth; } }
 
+/*.code-container {
+    max-width: 800px !important;
+    margin: auto !important;
+}
+
+pre.code {
+    background-color: #272822 !important;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+pre.shell {
+    border-left: 5px solid #ff79c6;
+}
+
+pre.python {
+    border-left: 5px solid #66d9ef;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+}*/
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -102,14 +130,14 @@ hr {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2; }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw); }
-  @media (min-width: 1200px) {
+  font-size: calc(1rem + 1vw); }
+  @media (min-width: 500px) {
     h1, .h1 {
-      font-size: 2.5rem; } }
+      font-size: 1.75rem; } }
 
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw); }
@@ -208,6 +236,10 @@ a {
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none; }
+
+.custom-spacing {
+  margin-right: 40px; /* Adjust the value as needed */
+}
 
 pre,
 code,
@@ -9953,3 +9985,13 @@ img {
   html:not(.no-js) [data-aos=flip-down].aos-animate {
     -webkit-transform: perspective(2500px) rotateX(0);
     transform: perspective(2500px) rotateX(0); } }
+
+.code-box {
+  border: 1px solid #5d5050 !important;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #564545 !important;
+  overflow-x: auto;
+  margin-top: 10px;
+  color: #ffffff; /* Ensure text is visible on the dark background */
+}
