@@ -80,6 +80,16 @@
   :root {
     scroll-behavior: smooth; } }
 
+.code-box {
+  border: 1px solid #5d5050;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #786262;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

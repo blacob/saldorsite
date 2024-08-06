@@ -81,60 +81,49 @@
         </div>
       </div>
     </div>
-
-
-    <!--<li class="nav-item">
-    <a class="nav-link" href="#numbers">
-      Numbers
-    </a>
-  </li>-->
-    <!--<li class="nav-item">
-    <a class="nav-link" href="https://console.saldor.com" target="_blank" rel="noopener noreferrer">
-      Get Started
-    </a>
-  </li>-->
-    <!--<li class="nav-item">
-    <a class="nav-link" href="#workwithus">
-      Work with us
-    </a>
-  </li>-->
-    <!--<li class="nav-item">
-    <a class="nav-link" href="#testimonials">
-      Testimonials
-    </a>
-  </li>-->
-
     </div>
     </div>
   </nav>
 
-  <main>
+<main>
     <div class="w-100 overflow-hidden bg-gray-100" id="top">
-
       <div class="container position-relative">
         <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left"
           style="background-image: url(img/webp/interior11.webp);">
-
         </div>
         <div class="row">
-
-          <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
+          <div class="col-lg-6 py-vh-6 position-relative" data-aos="fade-right">
             <h4 class="display-1 fw-bold mt-5" style="font-size: 5vw;">Educate your AI.</h4>
             <br>
             <p class="lead">Extract the best web data for LLMs. </p>
             <p class="lead">Get early access today.</p>
-
             <br>
             <a href="https://cal.com/team/saldor/intro" class="btn btn-primary">Book a Meeting</a>
           </div>
+          <div class="col-lg-6 py-vh-6 position-relative" data-aos="fade-right">
+            <p class="lead">As simple as... </p>
+            <div class="code-box">
+              <pre><code>pip install saldor</code></pre>
+              <pre style="white-space: pre-wrap;"><code>----                
+from saldor import SaldorClient
+import os
 
+sc = SaldorClient(api_key=os.getenv('SALDOR_API_KEY'))
 
+instructions = "I'm making a customer support bot for the city of San Francisco. I want it to be particularly knowledgeable on Housing And Food Safety policy in the city. Don't scrape more than 100 pages"
+
+documents = sc.scrape("https://www.sf.gov/", {"prompt": instructions})
+----
+</code></pre>
+            </div>
+          <p class="lead">Connect this data to the Embedding model and Vector DB of your choice, and you're on your way to an exceptionally tuned AI agent. </p>
+          </div>
         </div>
       </div>
-
     </div>
+</main>
 
-  </main>
+
 
   <footer>
     <div class="container small border-top">
