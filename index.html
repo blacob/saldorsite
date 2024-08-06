@@ -9,11 +9,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="96x96" href=".t/img/favicon.png">
-  <meta name="author" content="Holger Koenemann">
+  <meta name="author" content="Jacob Bland">
   <meta name="generator" content="Eleventy v2.0.0">
   <meta name="HandheldFriendly" content="true">
   <title>Saldor</title>
-  <link rel="stylesheet" href="css/theme.min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+
+  <link href="css/prism.css" rel="stylesheet" />
 
   <style>
     /* inter-300 - latin */
@@ -52,6 +56,8 @@
         url('./fonts/inter-v12-latin-700.woff') format('woff');
       /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
+
+    
   </style>
 
 </head>
@@ -103,20 +109,22 @@
           <div class="col-lg-6 py-vh-6 position-relative" data-aos="fade-right">
             <p class="lead">As simple as... </p>
             <div class="code-box">
-              <pre><code>pip install saldor</code></pre>
-              <pre style="white-space: pre-wrap;"><code>----                
-from saldor import SaldorClient
+              <pre><code class="language-bash">pip install saldor</code></pre>
+              <pre class="language-python"><code>from saldor import SaldorClient
 import os
 
-sc = SaldorClient(api_key=os.getenv('SALDOR_API_KEY'))
+instructions = "I'm making a customer support bot for the city of San Francisco. 
+I want it to be particularly knowledgeable on Housing And Food Safety policy in 
+the city. Don't scrape more than 100 pages"
 
-instructions = "I'm making a customer support bot for the city of San Francisco. I want it to be particularly knowledgeable on Housing And Food Safety policy in the city. Don't scrape more than 100 pages"
+client = SaldorClient(api_key=os.getenv('SALDOR_API_KEY'))
 
-documents = sc.scrape("https://www.sf.gov/", {"prompt": instructions})
-----
+documents = client.scrape("https://www.sf.gov", {"prompt": instructions})
+...
 </code></pre>
             </div>
-          <p class="lead">Connect this data to the Embedding model and Vector DB of your choice, and you're on your way to an exceptionally tuned AI agent. </p>
+          <br>
+          <p class="lead">Our AI can interpret your intention and find the data most important to you. Embed these documents and throw them in your Vector DB, and you're on your way to an exceptionally tuned AI agent. </p>
           </div>
         </div>
       </div>
@@ -173,6 +181,7 @@ documents = sc.scrape("https://www.sf.gov/", {"prompt": instructions})
     })
   </script>
 
+  <script src="./js/prism.js"></script>
 </body>
 
 </html>

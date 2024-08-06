@@ -80,14 +80,32 @@
   :root {
     scroll-behavior: smooth; } }
 
-.code-box {
-  border: 1px solid #5d5050;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #786262;
-  overflow-x: auto;
-  margin-top: 10px;
+/*.code-container {
+    max-width: 800px !important;
+    margin: auto !important;
 }
+
+pre.code {
+    background-color: #272822 !important;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+pre.shell {
+    border-left: 5px solid #ff79c6;
+}
+
+pre.python {
+    border-left: 5px solid #66d9ef;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+}*/
 
 
 body {
@@ -9967,3 +9985,13 @@ img {
   html:not(.no-js) [data-aos=flip-down].aos-animate {
     -webkit-transform: perspective(2500px) rotateX(0);
     transform: perspective(2500px) rotateX(0); } }
+
+.code-box {
+  border: 1px solid #5d5050 !important;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #564545 !important;
+  overflow-x: auto;
+  margin-top: 10px;
+  color: #ffffff; /* Ensure text is visible on the dark background */
+}
